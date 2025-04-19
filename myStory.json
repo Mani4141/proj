@@ -1,0 +1,170 @@
+{
+    "Title": "Campus Life on the West Side",
+    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
+    "InitialLocation": "Stevenson",
+    "Locations": {
+        "Dorm": {
+              "Body": "You are in your dorm. The bed is made, your desk is cluttered, and your laptop is glowing softly.",
+              "Class": "DormRoom",
+              "Choices": [
+                {
+                    "Text": "Log in to your dorm computer",
+                    "Target": "Dorm2", 
+                    "Gives": "raveUnlocked"
+                },
+                {
+                  "Text": "Go outside toward Stevenson",
+                  "Target": "Stevenson"
+                },
+                {
+                    "Text": "Go to bed (ends game)",
+                    "Target": "Go to Bed"
+                }
+              ]
+            },
+        "Dorm2": {
+            "Body": "You find an odd email with cryptic directions from a student... something about beats pulsing through the trees near C9/C10.",
+            "Choices": [
+                {
+                "Text": "Go outside toward Stevenson",
+                "Target": "Stevenson"
+                },
+                {
+                "Text": "Stay in your dorm",
+                "Target": "Dorm"
+                },
+                {
+                    "Text": "Go to bed (ends game)",
+                    "Target": "Go to Bed"
+                }
+            ]
+        },           
+        "Go to Bed ": {
+            "Body": "You have had a long day and decide to go to bed"
+        },
+        "Stevenson": {
+            "Body": "This is Stevenson College, great view from east field.",
+            "Choices": [
+                {
+                    "Text": "North West",
+                    "Target": "C9/C10"
+                },
+                {
+                    "Text": "Dorm",
+                    "Target": "Dorm"
+                }
+            ]
+        },
+        "C9/C10": {
+            "Body": "This is C9/C10 College, great dining hall food.",
+            "Choices": [
+                {
+                    "Text": "West",
+                    "Target": "Jack Baskin"
+                },
+                {
+                    "Text": "South East",
+                    "Target": "Stevenson"
+                },
+                {
+                    "Text": "Follow the beats through the woods",
+                    "Target": "SecretRave",
+                    "Condition": "raveUnlocked"
+                }
+            ]
+        },
+        "SecretRave": {
+            "Body": "You push through the trees and find a pulsing crowd of students dancing under string lights. It's a full-blown secret rave.",
+            "Choices": [
+                {
+                    "Text": "Back to C9/C10",
+                    "Target": "C9/C10"
+                }
+            ]
+        },
+        "Jack Baskin": {
+            "Body": "This is Jack Baskin, lots of cool buildings. There's a glowing button on the wall...",
+            "Mechanism": "glowingButton",
+            "Choices": [
+                {
+                    "Text": "South West",
+                    "Target": "Kresge"
+                },
+                {
+                    "Text": "East",
+                    "Target": "C9/C10"
+                }
+            ]
+        },
+        "HiddenLab": {
+            "Body": "You've discovered a hidden lab filled with glowing screens and high-tech gadgets!",
+            "Choices": [
+                {
+                    "Text": "Back to Jack Baskin",
+                    "Target": "Jack Baskin"
+                 }
+            ]
+        },
+        "Kresge": {
+            "Body": "This is Kresge College, lots of nice trees.",
+            "Choices": [
+                {
+                    "Text": "South",
+                    "Target": "Porter"
+                },
+                {
+                    "Text": "North East",
+                    "Target": "Jack Baskin"
+                }
+            ]
+        },
+        "Porter": {
+            "Body": "This is Porter College, the trees are nice here too.",
+            "Choices": [
+                {
+                    "Text": "North",
+                    "Target": "Kresge"
+                },
+                {
+                    "Text": "South",
+                    "Target": "Rachel Carson"
+                }
+            ]
+        },
+        "Rachel Carson": {
+            "Body": "Rachel Carson College, more sun and fewer trees.",
+            "Choices": [
+                {
+                    "Text": "North",
+                    "Target": "Porter"
+                },
+                {
+                    "Text": "South",
+                    "Target": "Oakes"
+                }
+            ]
+        },
+        "Oakes": {
+            "Body": "Oakes College, even the buildings have tree bark on them.",
+            "Choices": [
+                {
+                    "Text": "North",
+                    "Target": "Rachel Carson"
+                },
+                {
+                    "Text": "South",
+                    "Target": "Beyond"
+                }
+            ]
+        },
+        "Beyond": {
+            "Body": "Grass, don't forget to check for ticks!",
+            "Choices": [
+                {
+                    "Text": "Nothing further go back North",
+                    "Target": "Oakes"
+                }
+            ]
+        }
+    }
+}
